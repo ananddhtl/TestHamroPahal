@@ -15,6 +15,8 @@ use App\Http\Controllers\ChildContentController;
 use App\Http\Controllers\TestimonialsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FAQController;
+use App\Http\Controllers\SliderImagesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -70,7 +72,7 @@ Route::POST('/user-updatepassword', [PublicUserController::class, 'updateForgetP
 Route::post('/user-updateuserinformation', [PublicUserController::class, 'updateUserInformation']);
 Route::get('/user-profile', [PublicUserController::class, 'userinformation']);
 
-Route::get('/', [FrontendController::class, 'homepage']);
+
 Route::get('/ourblog', [FrontendController::class, 'blogpage']);
 Route::get('/ourblog-description/{id}', [FrontendController::class, 'blogdescription']);
 Route::get('/event-description/{id}', [FrontendController::class, 'eventDescription']);
@@ -138,6 +140,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin-storefaqs', [FAQController::class, 'store']);
 
     Route::get('/getrefrenceusers/{tCode}', [RefrenceUserController::class, 'getrefrenceusers']);
+
+    Route::get('/admin-listsliderimages', [SliderImagesController::class, 'index']);
 
 
 });

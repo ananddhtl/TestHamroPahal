@@ -72,6 +72,13 @@
                         <span class="menu--label">FAQS</span>
                     </a>
                 </li>
+                 <li class="menu--item">
+                    <a href="/admin-listsliderimages" class="menu--link" title="Subscription"
+                        data-bs-toggle="tooltip" data-bs-placement="right">
+                        <i class="fa-solid fa-bahai menu--icon"></i>
+                        <span class="menu--label">Slider Images</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
